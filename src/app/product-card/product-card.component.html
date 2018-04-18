@@ -1,0 +1,44 @@
+
+
+
+
+
+<div class="card"  *ngIf="product.title">
+
+<img *ngIf="product.imageUrl"
+     class="card-img-top"
+     [src]="product.imageUrl"
+     alt="{{product.title}}">
+
+<div class="card-body">
+  <h4 class="card-title">{{product.title}}</h4><h6>Product ID : {{product.product_id}}</h6>
+  <p class="card-text">{{product.price | currency: 'USD': 'true'}}</p>
+</div>
+
+<div class="card-footer" *ngIf="showActions">
+  <button
+    *ngIf="getQuantity(product.product_id) === 0; else updateQuantity"
+    (click)="addToCart(product)"
+    class="btn btn-secondary btn-block">Add to Cart</button>
+
+  <ng-template #updateQuantity>
+    <div class="row no-gutters">
+      <div class="col-2">
+        <button class="btn btn-secondary btn-block" (click)="deleteFromCart(product)">-</button>
+      </div>
+      <div class="col text-center">
+        {{getQuantity(product.product_id)}} in cart
+      </div>
+      <div class="col-2">
+        <button class="btn btn-secondary btn-block" (click)="addToCart(product)">+</button>
+      </div>
+    </div>
+  </ng-template>
+
+</div>
+</div>
+
+
+<!--THIS IS WORKING AND IS USED IN ALL THE PAGES AS CARD BODY-->
+
+

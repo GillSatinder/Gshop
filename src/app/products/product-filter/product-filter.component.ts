@@ -1,0 +1,21 @@
+import {Component, OnInit, Output, Input} from '@angular/core';
+import {CategoryService} from '../../category.service';
+
+ @Component({
+  selector: 'app-product-filter',
+  templateUrl: './product-filter.component.html',
+  styleUrls: ['./product-filter.component.css']
+})
+export class ProductFilterComponent implements OnInit {
+ @Input() categories;
+ @Input() category;
+  constructor(private categoryService: CategoryService) {}
+
+  ngOnInit() {
+    this.categoryService.getAllCategories()
+      .subscribe(res => {
+        this.categories = res;
+      });
+  }
+
+}

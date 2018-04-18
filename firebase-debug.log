@@ -1,0 +1,41 @@
+[debug] [2018-03-04T14:30:39.868Z] ----------------------------------------------------------------------
+[debug] [2018-03-04T14:30:39.871Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2018-03-04T14:30:39.871Z] CLI Version:   3.17.4
+[debug] [2018-03-04T14:30:39.872Z] Platform:      darwin
+[debug] [2018-03-04T14:30:39.872Z] Node Version:  v6.9.4
+[debug] [2018-03-04T14:30:39.872Z] Time:          Mon Mar 05 2018 01:30:39 GMT+1100 (AEDT)
+[debug] [2018-03-04T14:30:39.873Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-03-04T14:30:39.890Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-03-04T14:30:39.890Z] > authorizing via signed-in user
+[debug] [2018-03-04T14:30:39.894Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/gshop-e2765  
+  
+ Mon Mar 05 2018 01:30:39 GMT+1100 (AEDT)
+[debug] [2018-03-04T14:30:40.860Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-04T14:30:40.862Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/gshop-e2765/tokens  
+  
+ Mon Mar 05 2018 01:30:40 GMT+1100 (AEDT)
+[debug] [2018-03-04T14:30:41.643Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Applications/XAMPP/xamppfiles/htdocs/Gshop'...
+[info] 
+[debug] [2018-03-04T14:30:41.649Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/gshop-e2765  
+  
+ Mon Mar 05 2018 01:30:41 GMT+1100 (AEDT)
+[debug] [2018-03-04T14:30:43.223Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-04T14:30:43.224Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/684167814156/clients/_:getWebAppConfig  
+  
+ Mon Mar 05 2018 01:30:43 GMT+1100 (AEDT)
+[debug] [2018-03-04T14:30:44.170Z] <<< HTTP RESPONSE 200
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[debug] [2018-03-04T14:30:44.190Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/gshop-e2765  
+  
+ Mon Mar 05 2018 01:30:44 GMT+1100 (AEDT)
+[debug] [2018-03-04T14:30:45.546Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-04T14:30:45.547Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/684167814156/clients/_:getWebAppConfig  
+  
+ Mon Mar 05 2018 01:30:45 GMT+1100 (AEDT)
+[debug] [2018-03-04T14:30:46.681Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: dist
+[info] ✔  hosting: Local server: http://localhost:5004
+

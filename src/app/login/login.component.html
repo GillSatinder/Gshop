@@ -1,0 +1,50 @@
+<form
+  #f="ngForm"
+  (ngSubmit)="loginUser(f.value)">
+  <h2>Please sign in</h2>
+
+  <div *ngIf="invalidLogin" class="alert alert-danger">
+    Invalid username and/or password.
+  </div>
+  <div class="form-group">
+    <label
+      for="emailId">
+      Email address
+    </label>
+    <input
+      type="email"
+      ngModel
+      name="emailId"
+      #emailId="ngModel"
+      class="form-control"
+      id="emailId"
+      aria-describedby="emailHelp"
+      placeholder="Enter email"
+      autocomplete="off">
+  </div>
+
+  <div class="form-group">
+    <label
+      for="password">
+      Password
+    </label>
+    <input
+      type="password"
+      class="form-control"
+      id="password"
+      placeholder="Password"
+      ngModel
+      name="password"
+      #password="ngModel"
+      autocomplete="off">
+  </div>
+  <button
+     type="submit"
+     class="btn btn-primary">
+     Submit
+  </button>
+  <br>
+  <p>Don't have an account? SignUp </p>
+
+ <a [routerLink]="['/user/signup']">Sign up</a>
+</form>
