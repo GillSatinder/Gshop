@@ -40,8 +40,7 @@ const routes: Routes = [
   },
 
   { path: 'my/orders',
-    component: MyOrdersComponent,
-    canActivate: [AuthGuardService]
+    component: MyOrdersComponent
   },
 
   { path: 'user/signup',
@@ -57,13 +56,11 @@ const routes: Routes = [
   },
 
   { path: 'admin/products',
-    component: AdminProductsComponent,
-    canActivate: [AuthGuardService]
+    component: AdminProductsComponent
   },
 
   { path: 'admin/orders',
-    component: AdminOrdersComponent,
-    canActivate: [AuthGuardService]
+    component: AdminOrdersComponent
   },
 
   { path: 'shopping-cart/products',

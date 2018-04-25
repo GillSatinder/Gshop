@@ -42,13 +42,26 @@ export class ProductFormComponent {
     if (this.product_id) {
        this.update(this.product_id, this.product);
      } else {
-      const body = {
-        product_id: product.product_id,
-        title: product.title,
-        price: product.price,
-        category: product.category,
-        imageUrl: product.imageUrl
-      };
+       const body = {
+         product_id: product.product_id,
+         title: product.title,
+         price: product.price,
+         category: product.category,
+         imageUrl: product.imageUrl
+       };
+
+      // const body = {
+      //   product_id: 3,
+      //   title: 'Kiwi',
+      //   price: 1,
+      //   category: 'fruits',
+      //   imageUrl: 'll'
+      // };
+      console.log('Body is ' + body.product_id);
+      console.log('Body is ' + body.title);
+      console.log('Body is ' + body.price);
+      console.log('Body is ' + body.category);
+      console.log('Body is ' + body.imageUrl);
       const url = 'http://localhost:8000/api/products';
       this.http.post<Product>(url, body, httpOptions)
         .subscribe(res => {});

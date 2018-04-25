@@ -48,6 +48,11 @@ export class UserService {
   }
   getLoggedUser() {
     return this.userInformation;
-
+  }
+  getUser() {
+    return this.getLoggedUser();
+  }
+  save() {
+    return null;
   }
 }
