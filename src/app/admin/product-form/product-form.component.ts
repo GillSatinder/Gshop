@@ -18,7 +18,7 @@ const httpOptions = {
 })
 export class ProductFormComponent {
   categories$;
-  product = {};
+  product = <any>{};
   product_id;
 
 
@@ -28,7 +28,7 @@ export class ProductFormComponent {
                private router: Router,
                private location: Location) {
 
-    this.http.get('http://localhost:8000/api/categories')
+    this.http.get('http://ec2-13-236-67-227.ap-southeast-2.compute.amazonaws.com/api/categories')
       .subscribe(res => {
       this.categories$ = res;
       });
@@ -49,20 +49,7 @@ export class ProductFormComponent {
          category: product.category,
          imageUrl: product.imageUrl
        };
-
-      // const body = {
-      //   product_id: 3,
-      //   title: 'Kiwi',
-      //   price: 1,
-      //   category: 'fruits',
-      //   imageUrl: 'll'
-      // };
-      console.log('Body is ' + body.product_id);
-      console.log('Body is ' + body.title);
-      console.log('Body is ' + body.price);
-      console.log('Body is ' + body.category);
-      console.log('Body is ' + body.imageUrl);
-      const url = 'http://localhost:8000/api/products';
+      const url = 'http://ec2-13-236-67-227.ap-southeast-2.compute.amazonaws.com/api/products';
       this.http.post<Product>(url, body, httpOptions)
         .subscribe(res => {});
       this.router.navigate(['/admin/products']);
@@ -72,7 +59,7 @@ export class ProductFormComponent {
   getProduct(product_id) {
     if (product_id) {
       const p = this.http
-        .get('http://localhost:8000/api/products/' + product_id + '/edit');
+        .get('http://ec2-13-236-67-227.ap-southeast-2.compute.amazonaws.com/api/products/' + product_id + '/edit');
       p.subscribe(res => {
         this.product = res;
 
@@ -89,7 +76,7 @@ export class ProductFormComponent {
       price: product.price,
       category: product.category,
       imageUrl: product.imageUrl};
-    const url = 'http://localhost:8000/api/products/' + product_id;
+    const url = 'http://ec2-13-236-67-227.ap-southeast-2.compute.amazonaws.com/api/products/' + product_id;
     this.http.put<Product>(url, body, httpOptions)
       .subscribe(res => {
         console.log(res);
@@ -97,7 +84,7 @@ export class ProductFormComponent {
     this.router.navigate(['/admin/products']);
   }
   deleteProduct() {
-    const url = 'http://localhost:8000/api/products/';
+    const url = 'http://ec2-13-236-67-227.ap-southeast-2.compute.amazonaws.com/api/products/';
     if (!confirm('Are you sure you want to delete this product?')) { return; }
     console.log('ID ' + this.product_id);
       this.http.delete(url + this.product_id)

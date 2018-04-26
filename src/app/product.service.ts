@@ -24,8 +24,9 @@ product: Product;
               private router: Router) { }
 
   getAllProducts() {
-   return this.http.get('http://localhost:8000/api/products');
+   return this.http.get('http://ec2-13-236-67-227.ap-southeast-2.compute.amazonaws.com/api/products');
   }
+
   getProductById(id) {
     if (id) {
 

@@ -1,10 +1,8 @@
 import {Component, Input, OnDestroy, OnInit, Output} from '@angular/core';
 import 'rxjs/add/operator/map';
 import {HttpClient} from '@angular/common/http';
-import {ActivatedRoute} from '@angular/router';
 import {Product} from '../../product';
 import {Subscription} from 'rxjs/Subscription';
-import { DataTableResource } from 'angular-4-data-table';
 
 
 @Component({
@@ -19,7 +17,7 @@ export class AdminProductsComponent implements OnInit, OnDestroy {
 
 
   constructor(private http: HttpClient) {
-   this.subscription = this.http.get('http://localhost:8000/api/products')
+   this.subscription = this.http.get('http://ec2-13-236-67-227.ap-southeast-2.compute.amazonaws.com/api/products')
       .subscribe(res => {
         this.filteredProducts = this.products = Object.values(res);
       });

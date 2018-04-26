@@ -10,7 +10,7 @@ import {User} from '../User';
 })
 export class SignupComponent  {
 
-  user = {};
+  user = <any>{};
   constructor(private userService: UserService) { }
 
 

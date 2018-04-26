@@ -17,7 +17,7 @@ export class ShoppingCartComponent implements OnInit{
   @Input() showActions = true;
   items: Item [] = [];
   cart: any = [];
-  private total = 0;
+  total = 0;
 
   constructor() {}
 
