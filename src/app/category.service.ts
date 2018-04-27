@@ -13,7 +13,7 @@ export class CategoryService {
 // }
 
 getAllCategories() {
-    return this.http.get('http://ec2-13-236-67-227.ap-southeast-2.compute.amazonaws.com/api/categories');
+    return this.http.get('https://ec2-13-236-67-227.ap-southeast-2.compute.amazonaws.com/api/categories');
 }
 
 }
